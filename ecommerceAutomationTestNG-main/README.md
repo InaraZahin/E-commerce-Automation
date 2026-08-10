@@ -13,7 +13,6 @@ The following key modules/pages are automated:
 Key test cases(total **51**) are written for each module and test suites created including the positive and negative test cases.</br>A state-transition flow of test-cases are designed and run like a user buying a product from an e-commerce site.</br>
 For failed test cases it will take a screenshot aswell at the point of failure.
 
-View the excel file from this [link](https://cutt.ly/oNogWmX).
 
 ### Technology: </br>
 
