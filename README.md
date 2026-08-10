@@ -1,5 +1,3 @@
-Here's a reworded version of your README content:
-
 This project delivers end-to-end test automation for an E-commerce website, built using Selenium WebDriver with TestNG as the testing framework.
 
 The automation covers the following core modules/pages:
