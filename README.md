@@ -66,11 +66,13 @@ allure serve allure-results
 
 Below is a snapshot of the Allure summary report:
 
-*(insert Allure overview screenshot here)*
+<img width="1860" height="894" alt="185918539-c40ea3e9-dd3f-4e56-b223-adcf80fcbf25" src="https://github.com/user-attachments/assets/0928bbe9-a150-4e95-8592-4c0bfd1b4462" />
+
 
 Here's a breakdown of the test suites included in this project:
 
-*(insert test suite screenshot here)*
+<img width="1863" height="922" alt="185918375-8ac0df03-ee09-4215-a6df-ecdbcf9fd5cd" src="https://github.com/user-attachments/assets/68ecd4e4-3e4d-4073-b61f-7a69e06f9cc3" />
+
 
 ## Project Walkthrough
 
