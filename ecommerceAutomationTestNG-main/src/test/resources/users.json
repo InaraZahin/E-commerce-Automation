@@ -1,0 +1,30 @@
+[
+  {
+    "password": "P@ssword123",
+    "email": "qa.testuser01@example.com"
+  },
+  {
+    "password": "P@ssword",
+    "email": "qa.testuser01@example.com"
+  },
+  {
+    "password": "P@ssword123",
+    "email": "qa.testuser02@example.com"
+  },
+  {
+    "password": "P@ssword",
+    "email": "qa.testuser03@example.com"
+  },
+  {
+    "password": "TestPass@0004",
+    "email": "qa.testuser04@example.com"
+  },
+  {
+    "password": "H90#L78v",
+    "email": "testautouser5781@example.com"
+  },
+  {
+    "password": "qpfv9gdb",
+    "email": "testautouser2140@example.com"
+  }
+]
