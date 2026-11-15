@@ -1,6 +1,11 @@
 # E-commerce Automation
 
 [![E2E](../../actions/workflows/e2e.yml/badge.svg)](../../actions/workflows/e2e.yml)
+![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?logo=openjdk&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-4-43B02A?logo=selenium&logoColor=white)
+![TestNG](https://img.shields.io/badge/TestNG-7-FF6C37)
+![Allure](https://img.shields.io/badge/Report-Allure-FF7F50)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 
 End-to-end tests for an online store, written in **Java** with **Selenium WebDriver**, **TestNG**
 and **Allure**. The suite tests a real [PrestaShop](https://prestashop.com) storefront, the
@@ -21,6 +26,10 @@ with the standard demo catalogue, so the tests are reproducible on any machine a
 | My account | 4 | Update name, wrong current password, password change, empty order history |
 
 Every test is tagged `smoke` (10 critical-path tests) or `regression`.
+
+![Allure report: a guest checkout test with every user step and its duration](docs/images/allure-report.png)
+
+*The Allure report: each test reads as a sequence of user actions, timed step by step.*
 
 ## Quick start
 
