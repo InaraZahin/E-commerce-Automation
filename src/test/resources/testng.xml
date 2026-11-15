@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Tests are independent (fresh browser + fresh data per test), so methods run in parallel. -->
+<suite name="E-commerce storefront" parallel="methods" thread-count="4" verbose="1">
+    <test name="Storefront">
+        <packages>
+            <package name="io.github.inarazahin.shop.tests"/>
+        </packages>
+    </test>
+</suite>

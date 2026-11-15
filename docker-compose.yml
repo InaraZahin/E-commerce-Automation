@@ -1,0 +1,44 @@
+# Disposable PrestaShop store (with the standard demo catalogue) for the test suite.
+# Usage: docker compose up -d --wait     (first start installs the shop: allow ~3-5 minutes)
+services:
+  db:
+    image: mariadb:10.11
+    environment:
+      MARIADB_ROOT_PASSWORD: prestashop
+      MARIADB_DATABASE: prestashop
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  shop:
+    image: prestashop/prestashop:${PS_VERSION:-8.2-apache}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${SHOP_PORT:-8080}:80"
+    volumes:
+      - ./docker/post-install:/tmp/post-install-scripts:ro
+    environment:
+      DB_SERVER: db
+      DB_NAME: prestashop
+      DB_USER: root
+      DB_PASSWD: prestashop
+      PS_INSTALL_AUTO: "1"
+      PS_DOMAIN: localhost:${SHOP_PORT:-8080}
+      PS_LANGUAGE: en
+      PS_COUNTRY: US
+      PS_ENABLE_SSL: "0"
+      PS_FOLDER_ADMIN: admin-dev
+      PS_FOLDER_INSTALL: install-dev
+      ADMIN_MAIL: admin@example.com
+      ADMIN_PASSWD: Admin-Pass-1234
+    healthcheck:
+      # Healthy once the storefront renders the demo catalogue.
+      test: ["CMD-SHELL", "curl -fsS http://localhost/ | grep -q 'product-miniature'"]
+      interval: 10s
+      timeout: 10s
+      retries: 60
+      start_period: 60s
